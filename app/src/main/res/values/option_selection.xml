@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="repeat_options">
+        <item>Once</item>
+        <item>Daily</item>
+        <item>Weekly</item>
+        <item>Monthly</item>
+    </string-array>
+    <string-array name="add_options">
+        <item>Creditor</item>
+        <item>Debtor</item>
+    </string-array>
+    <string-array name="currency_options">
+        <item>Ringgit Malaysia (RM)</item>
+        <item>US Dollar (USD)</item>
+    </string-array>
+    <string-array name="setting_options">
+        <item>Delete All Data</item>
+        <item>Change Currency</item>
+        <item>About Us</item>
+    </string-array>
+</resources>

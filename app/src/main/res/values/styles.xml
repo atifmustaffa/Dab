@@ -1,0 +1,23 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="DabTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:buttonStyle">@style/DabTheme.Button</item>
+        <item name="android:alertDialogTheme">@style/DabTheme.DialogTheme</item>
+    </style>
+
+    <style name="DabTheme.DialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="DabTheme.Button" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="DabTheme.BottomNavigation" parent="Widget.Design.BottomNavigationView">
+    </style>
+
+</resources>
