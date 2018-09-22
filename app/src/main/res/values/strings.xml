@@ -63,4 +63,7 @@
     <string name="empty_fill_msg">Please fill in all required data</string>
     <string name="importexport_lbl">Import/Export Data</string>
     <string name="importexport_options_lbl">Import/Export Options</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
