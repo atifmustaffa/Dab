@@ -62,7 +62,7 @@ public class SettingsActivity extends AppCompatActivity {
     private void showCurrencyDialogBox() {
         View view = getLayoutInflater().inflate(R.layout.alertdialog_box_choose, null);
         final AlertDialog alertDialog = new AlertDialog.Builder(SettingsActivity.this).create();
-        alertDialog.setTitle(getText(R.string.you_are_lbl));
+        alertDialog.setTitle(getText(R.string.select_currency_lbl));
         alertDialog.setView(view);
         ListView lv = (ListView) view.findViewById(R.id.lv);
         lv.setAdapter(new ArrayAdapter<String>(this, R.layout.listview_item_textview,
