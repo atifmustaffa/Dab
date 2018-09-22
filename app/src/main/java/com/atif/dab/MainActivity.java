@@ -195,7 +195,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), FeedbackActivity.class));
                 return true;
             case R.id.app_bar_importexport:
-                startActivity(new Intent(getApplicationContext(), ImportExportActivity.class));
+//                startActivity(new Intent(getApplicationContext(), ImportExportActivity.class));
+                showImportExportDialogBox();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -209,6 +210,7 @@ public class MainActivity extends AppCompatActivity {
         viewPagerAdapter.notifyDataSetChanged();
         if(searchView != null && !searchView.getQuery().equals("")) runSearch(searchView.getQuery().toString());
     }
+
     private void showDialogBox() {
         View view = getLayoutInflater().inflate(R.layout.alertdialog_box_choose, null);
         final AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
@@ -236,6 +238,27 @@ public class MainActivity extends AppCompatActivity {
         i.putExtra("com.atif.dab.addEdit", "add");
         i.putExtra("com.atif.dab.addEditOption", key);
         startActivity(i);
+    }
+
+    private void showImportExportDialogBox() {
+        View view = getLayoutInflater().inflate(R.layout.alertdialog_box_choose, null);
+        final AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
+        alertDialog.setTitle(getText(R.string.importexport_options_lbl));
+        alertDialog.setView(view);
+        ListView lv = (ListView) view.findViewById(R.id.lv);
+        lv.setAdapter(new ArrayAdapter<String>(this, R.layout.listview_item_textview,
+                getResources().getStringArray(R.array.ie_options)));
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(getApplicationContext(), ImportExportActivity.class);
+                intent.putExtra("com.atif.dab.ieType", i); // putExtra of the ie type
+                startActivity(intent);
+                alertDialog.dismiss();
+            }
+        });
+        alertDialog.show();
+
     }
 
 }

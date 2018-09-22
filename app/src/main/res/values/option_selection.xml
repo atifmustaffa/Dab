@@ -22,7 +22,7 @@
     <string-array name="ie_options">
         <item>Import from file</item>
         <item>Export to file</item>
-        <item>Save to database server</item>
-        <item>Load from database server</item>
+        <!--<item>Save to database server</item>-->
+        <!--<item>Load from database server</item>-->
     </string-array>
 </resources>
