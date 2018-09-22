@@ -22,11 +22,17 @@
             </intent-filter>
         </activity>
         <activity android:name=".ViewDebtActivity" />
-        <activity android:name=".AddEditActivity" android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".AddEditActivity"
+            android:windowSoftInputMode="stateHidden" />
         <activity android:name=".SettingsActivity" />
-        <activity android:name=".FeedbackActivity" android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".FeedbackActivity"
+            android:windowSoftInputMode="stateHidden" />
 
-        <receiver android:name=".AlertReceiver"/>
+        <receiver android:name=".AlertReceiver" />
+
+        <activity android:name=".ImportExportActivity"></activity>
     </application>
 
 </manifest>
