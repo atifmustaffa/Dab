@@ -16,4 +16,8 @@
         android:id="@+id/app_bar_settings"
         android:title="@string/settings_lbl"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/app_bar_importexport"
+        android:title="@string/importexport_lbl"
+        app:showAsAction="never" />
 </menu>

@@ -117,6 +117,7 @@ public class MainActivity extends AppCompatActivity {
             public boolean onMenuItemActionExpand(MenuItem item) {
                 menu.findItem(R.id.app_bar_feedback).setVisible(false);
                 menu.findItem(R.id.app_bar_settings).setVisible(false);
+                menu.findItem(R.id.app_bar_importexport).setVisible(false);
                 bottomNavigationView.setVisibility(View.GONE);
                 floatingActionButton.hide();
                 return true;
@@ -126,6 +127,7 @@ public class MainActivity extends AppCompatActivity {
             public boolean onMenuItemActionCollapse(MenuItem menuItem) {
                 menu.findItem(R.id.app_bar_feedback).setVisible(true);
                 menu.findItem(R.id.app_bar_settings).setVisible(true);
+                menu.findItem(R.id.app_bar_importexport).setVisible(true);
                 bottomNavigationView.setVisibility(View.VISIBLE);
                 if(viewPager.getCurrentItem() == 0)
                     floatingActionButton.show();
@@ -191,6 +193,9 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case R.id.app_bar_feedback:
                 startActivity(new Intent(getApplicationContext(), FeedbackActivity.class));
+                return true;
+            case R.id.app_bar_importexport:
+                startActivity(new Intent(getApplicationContext(), ImportExportActivity.class));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
