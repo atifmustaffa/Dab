@@ -1,5 +1,6 @@
 package com.atif.dab;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -9,10 +10,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.atif.dab.adapter.ListViewItemWithIconAdapter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -27,8 +37,10 @@ public class SettingsActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         listView = (ListView)findViewById(R.id.settingListView);
-        listView.setAdapter(new ArrayAdapter<String>(this,R.layout.listview_item_textview,
-                getResources().getStringArray(R.array.setting_options) ));
+        ListViewItemWithIconAdapter adapter = new ListViewItemWithIconAdapter(this,
+                getResources().getStringArray(R.array.setting_options),
+                getResources().obtainTypedArray(R.array.setting_options_icon));
+        listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -113,4 +125,5 @@ public class SettingsActivity extends AppCompatActivity {
                 });
         alertDialog.show();
     }
+
 }

@@ -19,6 +19,11 @@
         <item>Change Currency</item>
         <item>About Us</item>
     </string-array>
+    <integer-array name="setting_options_icon">
+        <item>@drawable/ic_trash</item>
+        <item>@drawable/ic_currency</item>
+        <item>@drawable/ic_info</item>
+    </integer-array>
     <string-array name="ie_options">
         <item>Import from file</item>
         <item>Export to file</item>
